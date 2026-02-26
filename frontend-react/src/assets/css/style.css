@@ -1,0 +1,159 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Animated Gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================= ROOT LAYOUT ================= */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= CARD ================= */
+.bg-light-dark {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease;
+}
+
+.bg-light-dark:hover {
+  transform: scale(1.02);
+}
+
+/* ================= UTILITIES ================= */
+.p-5 {
+  padding: 60px 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded {
+  border-radius: 20px;
+}
+
+.text-light {
+  color: #f8f9fa;
+}
+
+.lead {
+  font-size: 18px;
+  margin: 25px 0 35px;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 12px 30px;
+  border-radius: 40px;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Warning Outline */
+.btn-outline-warning {
+  border: 2px solid #ffc107;
+  color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+  background: #ffc107;
+  color: #000;
+  box-shadow: 0 0 20px #ffc107;
+  transform: translateY(-3px);
+}
+
+/* Info Solid */
+.btn-info {
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  color: #000;
+  border: none;
+}
+
+.btn-info:hover {
+  box-shadow: 0 0 25px #4facfe;
+  transform: translateY(-3px);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .p-5 {
+    padding: 40px 25px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
