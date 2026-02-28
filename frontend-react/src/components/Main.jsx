@@ -1,40 +1,23 @@
-import React from "react"
-import { Link } from 'react-router-dom'
-import Button from "./button"
+import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-
-
-
-
-
+import Button from './Button'
 
 const Main = () => {
   return (
     <>
     
     <div className="container">
-      <div className="p-5 text-center bg-light-dark rounded">
-        <h1 className="text-light">
-          Stock Prediction Portal
-        </h1>
-
-        <p className="text-light lead">
-          This stock prediction application utilizes machine learning
-          techniques such as LSTM models to forecast future stock
-          prices using 100-day and 200-day moving averages.
-        </p>
-
-        <div className="d-flex gap-3 justify-content-center">
-          <Link to="/login" className="btn btn-outline-warning">Login</Link>
-          <Link to="/register" className="btn btn-primary">Register</Link>
+        <div className='p-5 text-center bg-light-dark rounded'>
+            <h1 className='text-light'>Stock Prediction App</h1>
+            <p className="lead text-light">This stock prediction application utilizes machine learning techniques, specifically employing Keras, and LSTM model, integrated within the Django framework. It forecasts future stock prices by analyzing 100-day and 200-day moving averages, essential indicators widely used by stock analysts to inform trading and investment decisions.</p>
+            <Button text="Explore Now" class="btn-info" url="/dashboard" />
         </div>
-      </div>
     </div>
     
+    
     </>
-  );
-};
+  )
+}
 
-// export default Main;
-export default Main;
+export default Main
