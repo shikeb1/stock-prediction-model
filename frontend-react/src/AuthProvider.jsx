@@ -4,12 +4,12 @@ import { useState, useEffect, createContext } from 'react'
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [isLogin, setIsLogin] = useState(
+  const [isLoggedIn, setIsLoggedIn] = useState(
     !!localStorage.getItem('accessToken')
   )
   
   return (
-    < AuthContext.Provider value={{ isLogin, setIsLogin }}>
+    < AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
       {children}
     </AuthContext.Provider>
   )

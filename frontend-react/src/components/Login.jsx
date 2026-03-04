@@ -13,28 +13,28 @@ const Login = () => {
   const [error, setError] = useState('')
   const {isLoggedIn, setIsLoggedIn} = useContext(AuthContext)
 
-  const handleLogin = async (e) =>{
+ const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    const userData = {username, password}
-    console.log('userData==>', userData);
-
-    try{
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', userData)
-      localStorage.setItem('accessToken', response.data.access)
-      localStorage.setItem('refreshToken', response.data.refresh)
-      console.log('Login successful');
-      setIsLoggedIn(true)
-      navigate('/dashboard')
-    }catch(error){
-      console.error('Invalid credentials')
-      setError('Invalid credentials')
-    }finally{
-      setLoading(false)
-    }
-  }
-  
+    
+   try {
+    const response = await axios.post(
+        'http://127.0.0.1:8000/api/v1/token/', 
+        { username, password }
+    );
+    
+    localStorage.setItem('accessToken', response.data.access);
+    localStorage.setItem('refreshToken', response.data.refresh);
+    console.log('Login successful');
+    // Comment out setIsLoggedIn temporarily
+     setIsLoggedIn(true);  
+    navigate('/dashboard');
+    
+} catch(error) {
+    console.error(error.response?.data);  // ← Show real error
+    setError('Invalid credentials');
+}
+}
 
   return (
     <>
