@@ -1,9 +1,9 @@
-Nsh Nin, [05-03-2026 16:02]
+
 # 📈 Stock Prediction Portal
 
 > A full-stack AI-powered stock prediction web application using LSTM deep learning, Django REST Framework, and React — complete with JWT authentication and interactive chart visualizations.
 
-Built with ❤️ by Shikeb Malik
+Built by Shikeb Malik
 
 -----
 
@@ -946,3 +946,4 @@ This project is open source and available under the [MIT License](LICENSE).
 -----
 
 > Built with ❤️ by Shikeb Malik — *From raat 2 baje to production! 🚀*
+
