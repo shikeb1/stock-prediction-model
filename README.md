@@ -127,7 +127,7 @@ Inside backend-drf/, create a file named .env:
 SECRET_KEY=your-very-secret-django-key-here
 DEBUG=True
 
-Nsh Nin, [05-03-2026 16:02]
+
 To generate a Django secret key, run this in Python:
 from django.core.management.utils import get_random_secret_key
 print(get_random_secret_key())
@@ -296,7 +296,6 @@ name: CI/CD Pipeline
 on:
   push:
 
-Nsh Nin, [05-03-2026 16:02]
 branches: [main]
   pull_request:
     branches: [main]
@@ -446,7 +445,7 @@ Add to CI:
 
 ### 3. Static Application Security Testing (SAST) — Bandit
 
-Nsh Nin, [05-03-2026 16:02]
+
 Scans your Python code for security issues like SQL injection, hardcoded passwords, etc.
 pip install bandit
 bandit -r backend-drf/ -ll
@@ -752,7 +751,7 @@ import hashlib
 
 EXPECTED_MODEL_HASH = "paste_your_sha256_hash_here"
 
-Nsh Nin, [05-03-2026 16:02]
+
 def verify_model(path):
     sha256 = hashlib.sha256()
     with open(path, 'rb') as f:
@@ -939,7 +938,7 @@ Sentry.init({ dsn: "your-sentry-dsn" });
 
 -----
 
-Nsh Nin, [05-03-2026 16:02]
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
